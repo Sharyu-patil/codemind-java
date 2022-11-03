@@ -6,13 +6,21 @@ class pat
         Scanner sc=new Scanner(System.in);
         int n=sc.nextInt();
         int i,j;
-        for(i=1;i<=n;i++)
+        for(i=n;i>=1;i--)
         {
-            for(j=i;j<=n;j++)
+            for(j=n;j>=1;j--)
             {
-                System.out.print(j+" ");
+                if(i==j||j==(n-i+1))
+                {
+                    System.out.print(i+" ");
+                }
+                else
+                {
+                    System.out.print(" ");
+                }
             }
             System.out.println();
         }
+            
     }
 }
