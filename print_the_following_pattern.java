@@ -7,20 +7,13 @@ class pat
         int n=sc.nextInt();
         for(int i=1;i<=n;i++)
         {
-            for(int j=1;j<=n;j++)
+            for(int k=n;k>i;k--)
             {
-                if(j>n-2)
-                {
-                    continue;
-                }
-                else
-                {
-                    System.out.print(j);
-                }
+                System.out.print(" ");
             }
-            for(int j=n-3;j>=1;j--)
+            for(int j=1;j<2*i;j++)
             {
-                System.out.print(j);
+                System.out.print(i);
             }
             System.out.println();
         }
