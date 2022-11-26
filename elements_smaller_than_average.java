@@ -1,30 +1,29 @@
 import java.util.Scanner;
-class Minimum
+class avg
 {
     public static void main(String args[])
     {
-        int n,count=0,countt=0,sum=0,y=0;
         Scanner sc=new Scanner(System.in);
-        n=sc.nextInt();
-        int[] arr=new int[n];
+        int n=sc.nextInt();
+        int arr[]=new int[n];
         for(int i=0;i<n;i++)
         {
             arr[i]=sc.nextInt();
         }
+        int sum=0;
         for(int i=0;i<n;i++)
         {
-            sum+=arr[i];
-            count++;
+            sum=sum+arr[i];
         }
-        int avrg=sum/count;
+        int x=sum/n;
+        int c=0;
         for(int i=0;i<n;i++)
         {
-            if(arr[i]<=avrg)
+            if(arr[i]<=x)
             {
-                countt++;
+                c=c+1;
             }
         }
-        System.out.println(countt);
-        sc.close();
+        System.out.println(c);
     }
 }
